@@ -1,0 +1,23 @@
+# Git
+.git
+.gitignore
+
+# Node
+node_modules
+npm-debug.log*
+
+# Environment secrets — never bake into image
+.env
+.env.*
+
+# GitHub Actions / CI config
+.github
+
+# Editor / OS
+.vscode
+.idea
+*.DS_Store
+Thumbs.db
+
+# Docs
+README.md
