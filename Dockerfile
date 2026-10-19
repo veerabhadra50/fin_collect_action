@@ -1,12 +1,12 @@
-# ---- Build stage ----
-FROM node:20-alpine AS deps
+﻿# ---- Build stage ----
+FROM node:22-alpine AS deps
 WORKDIR /app
 
 COPY package*.json ./
 RUN npm ci --omit=dev
 
 # ---- Runtime stage ----
-FROM node:20-alpine
+FROM node:22-alpine
 WORKDIR /app
 
 # Create non-root user
@@ -21,3 +21,4 @@ USER appuser
 EXPOSE 5004
 
 CMD ["node", "index.js"]
+
